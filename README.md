@@ -12,13 +12,15 @@ Dự án mô phỏng một **robot di động 2 bánh** tích hợp:
 - **ROS**: ROS Noetic
 - **Gazebo**: Phiên bản 11
 - **Các package phụ thuộc**:
+  - `gazebo_ros`
+  - `gazebo_plugins`
   - `gazebo_ros_control`
-  - `joint_state_controller`
-  - `position_controllers`
-  - `diff_drive_controller`
- Killed- `robot_state_publisher`
+  - `ros_control`
+  - `ros_controllers`
+  - `robot_state_publisher`
   - `joint_state_publisher`
-
+  - `tf`
+  - `car2` 
 ##  Cài đặt
 
 ###  Bước 1: Tạo ROS Workspace
@@ -30,7 +32,7 @@ catkin_init_workspace
 
 ###  Bước 2: Clone Repository
 ```bash
-git clone https://github.com/thaithinhhl/ROS.git
+git clone https://github.com/AnhVu-163/car2.git
 cd ~/catkin_ws
 catkin_make
 ```
