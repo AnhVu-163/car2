@@ -20,67 +20,72 @@ Dự án mô phỏng một **robot di động 2 bánh** tích hợp:
   - `robot_state_publisher`
   - `joint_state_publisher`
   - `tf`
-  - `car2` 
-##  Cài đặt
+  - `car2`
 
-###  Bước 1: Tạo ROS Workspace
+## 🚀 Cài đặt
+
+### **Bước 1: Tạo ROS Workspace**
 ```bash
 mkdir -p ~/catkin_ws/src
 cd ~/catkin_ws/src
 catkin_init_workspace
 ```
 
-###  Bước 2: Clone Repository
+### **Bước 2 from typing import Union : Clone Repository**
 ```bash
 git clone https://github.com/AnhVu-163/car2.git
 cd ~/catkin_ws
 catkin_make
 ```
 
-###  Bước 3: Source Workspace
+### **Bước 3: Source Workspace**
 ```bash
 echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
 source ~/.bashrc
 ```
 
-##  Mô phỏng
+## 🛰️ Mô phỏng
 
-###  Bước 4: Khởi chạy mô phỏng trong Gazebo
+### **Bước 4: Khởi chạy mô phỏng trong Gazebo**
 ```bash
 roslaunch car2 gazebo.launch
 ```
 *Kết quả*: Mở Gazebo với robot và môi trường mô phỏng.
 
-###  Bước 5: Mở RViz để quan sát Robot
+### **Bước 5: Mở RViz để quan sát Robot**
 ```bash
 roslaunch car2 display.launch
 ```
 *Kết quả*: Hiển thị robot trong RViz để theo dõi trạng thái.
 
-###  Bước 6: Điều khiển robot di chuyển 
-- **Cách thực hiện**: Dùng 4 phím WASD bàn phím để di chuyển robot
+### **Bước 6: Điều khiển robot di chuyển**
+- **Cách thực hiện**: Dùng 4 phím **WASD** trên bàn phím để di chuyển robot.
 ```bash
 rosrun car2 move_robot.py
 ```
 *Kết quả*: Robot di chuyển theo lệnh chỉ định.
 
-###  Bước 7: Điều khiển cánh tay robot
-- **Cách thực hiện**: Dùng 4 phím IJKL bàn phím để chuyển động tay
+### **Bước 7: Điều khiển cánh tay robot**
+- **Cách thực hiện**: Dùng 4 phím **IJKL** trên bàn phím để chuyển động tay.
 ```bash
 rosrun car2 move_arm.py
 ```
-*Kết quả*: Điều khiển cánh tay robot robot bằng phím.
+*Kết quả*: Điều khiển cánh tay robot bằng phím.
 
-###  Bước 8: Đọc giá trị các cảm biến 
-#### IMU
+### **Bước 8: Đọc giá trị các cảm biến**
+#### **IMU**
 ```bash
 rostopic echo /imu/data
 ```
-#### Encoder
+
+#### **Encoder**
 ```bash
 rostopic echo /odom
 ```
-#### Camera
+
+#### **Camera**
 ```bash
 rosrun image_view image_view image:=/camera/image_raw
+```
+*Kết quả*: Xem hình ảnh, tọa độ, hướng của robot qua các cửa sổ.
 ```
