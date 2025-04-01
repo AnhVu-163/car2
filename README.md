@@ -80,5 +80,5 @@ rostopic echo /odom
 ```
 #### Camera
 ```bash
-rosrun image_view image_view image:=/image/raw
+rosrun image_view image_view image:=/camera/image_raw
 ```
